@@ -19,7 +19,7 @@ public class Robot extends IterativeRobot {
 	
     public void robotInit() {
     	try {
-    		f = new File("~/Output.txt");
+    		f = new File("Output.txt");
     		if(!f.exists()){
     			f.createNewFile();
     		}
