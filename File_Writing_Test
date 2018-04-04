@@ -8,18 +8,16 @@ import java.io.IOException;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 public class Robot extends IterativeRobot {
-    /**
-     * This function is run when the robot is first started up and should be
-     * used for any initialization code.
-     */
 	
 	File f;
 	BufferedWriter bw;
 	FileWriter fw;
 	
     public void robotInit() {
-    	try {
-    		f = new File("Output.txt");
+    	
+	try {
+	//
+    		f = new File("/media/sda1/Output.txt");
     		if(!f.exists()){
     			f.createNewFile();
     		}
@@ -33,7 +31,7 @@ public class Robot extends IterativeRobot {
 
 
     public void teleopInit(){
-    	
+  
     	try {
 			bw.write("Hellow, I'm a text file");
 			bw.close();
